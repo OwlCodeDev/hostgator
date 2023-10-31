@@ -12,4 +12,4 @@
 </Files>
 
 RewriteEngine On
-RewriteRule ^$ /home/ [L]
+RewriteRule ^(.*)$ /home/$1 [L]

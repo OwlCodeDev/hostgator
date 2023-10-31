@@ -3,3 +3,5 @@
 
 !.gitignore
 !.htaccess
+!README.md
+!Deployer.py

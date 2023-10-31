@@ -12,4 +12,5 @@
 </Files>
 
 RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/home/
 RewriteRule ^(.*)$ /home/$1 [L]

@@ -24,6 +24,10 @@ def download_and_extract_release_asset(release, name, asset_name):
     zip_path = f"{name}.zip"
     with open(zip_path, 'wb') as out_file:
         out_file.write(response.content)
+    
+    # Delete the folder before extracting the files
+    if os.path.exists(name):
+        shutil.rmtree(name)
 
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(name)

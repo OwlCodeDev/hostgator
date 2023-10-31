@@ -11,9 +11,5 @@
     Deny from all
 </Files>
 
-Alias / /home/
-<Directory /home/>
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-</Directory>
+RewriteEngine On
+RewriteRule ^$ /home/ [L]
